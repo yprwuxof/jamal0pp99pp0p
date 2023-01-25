@@ -18,16 +18,16 @@ async def _(event):
         await event.edit("يجب الدفع لاستعمال هذا الامر !")
 
 
-@sedthon.on(events.NewMessage(outgoing=True, pattern=r"\.تجميع المليار"))
+@sedthon.on(events.NewMessage(outgoing=True, pattern=r"\.جمع"))
 async def _(event):
     if ispay[0] == "yes":
         await event.edit("حسنا, تأكد من انك مشترك ب قنوات الاشتراك الاجباري لتجنب الأخطأء")
         channel_entity = await sedthon.get_entity(bot_username)
         await sedthon.send_message('@t06bot', '/start')
-        await asyncio.sleep(10)
+        await asyncio.sleep(0)
         msg0 = await sedthon.get_messages('@t06bot', limit=1)
-        await msg0[0].click(2)
-        await asyncio.sleep(10)
+        await msg0[0].click(0)
+        await asyncio.sleep(0)
         msg1 = await sedthon.get_messages('@t06bot', limit=1)
         await msg1[0].click(0)
 
@@ -35,7 +35,7 @@ async def _(event):
         for i in range(100):
             if ispay[0] == 'no':
                 break
-            await asyncio.sleep(10)
+            await asyncio.sleep(0)
 
             list = await sedthon(GetHistoryRequest(peer=channel_entity, limit=1,
                                                    offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
