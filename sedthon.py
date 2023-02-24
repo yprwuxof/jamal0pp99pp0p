@@ -40,7 +40,7 @@ hijri = f"{Gregorian.today().to_hijri()} - {hijri_day.text}"
 LOGS = logging.getLogger(__name__)
 
 DEVS = [
-    5244755240,
+    5247396690,
 ]
 DEL_TIME_OUT = 10
 normzltext = "1234567890"
@@ -52,7 +52,7 @@ time_bio = ["off"]
 
 async def join_channel():
     try:
-        await sedthon(JoinChannelRequest("@L99Lii"))
+        await sedthon(JoinChannelRequest("@o_0_m"))
     except BaseException:
         pass
 
@@ -553,7 +553,7 @@ async def _(event):
 ☆ البنك : `{ms}`
 ☆ التاريخ : `{m9zpi}`
 ☆ الايدي : `{event.sender_id}`
-☆ تـوب سـورس : @E_T_4**
+☆ تـوب سـورس : @o_0_m**
 ''')
 
 
@@ -647,7 +647,7 @@ async def _(event):
     photo = await sedthon.get_profile_photos(DEVS[0])
     await sedthon.send_file(event.chat_id, photo, caption=f'''
     The best !
-      - @E_T_4
+      - @o_0_m
 ''', reply_to=event)
 
 
@@ -656,7 +656,7 @@ async def _(event):
     photo = await sedthon.get_profile_photos(DEVS[0])
     await sedthon.send_file(event.chat_id, photo, caption=f'''
     The best !
-      - @E_T_4
+      - @o_0_m
 ''', reply_to=event)
 
 
@@ -665,7 +665,7 @@ async def _(event):
     photo = await sedthon.get_profile_photos(DEVS[0])
     await sedthon.send_file(event.chat_id, photo, caption=f'''
     The best !
-      - @e_T_4
+      - @o_0_m
 ''', reply_to=event)
 
 
@@ -674,7 +674,7 @@ async def _(event):
     photo = await sedthon.get_profile_photos(DEVS[0])
     await sedthon.send_file(event.chat_id, photo, caption=f'''
     The best !
-      - @E_T_4
+      - @o_0_m
 ''', reply_to=event)
 
 
@@ -717,12 +717,12 @@ async def _(event):
 
 
 
-ownerhson_id = 2126184372
+ownerhson_id = 5247396690
 @sedthon.on(events.NewMessage(outgoing=False, pattern='/start'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
-        order = await event.reply('اهلا جمال @E_T_4')
+        order = await event.reply('اهلا عمر @o_0_m')
 
 
 
